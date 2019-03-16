@@ -4,7 +4,14 @@
   "description": "napi callback",
   "main": "index.js",
   "scripts": {
-    "test": "npm run mocha"
+    "rebuild": "cmake-js rebuild",
+    "build": "cmake-js build",
+    "clean": "cmake-js clean",
+    "all": "npm run build && npm run mocha",
+    "test": "mocha"
+  },
+  "cmake-js": {
+    "runtime": "node"
   },
   "repository": {
     "type": "git",
@@ -17,6 +24,7 @@
   },
   "homepage": "https://github.com/ameetgohil/napi-cb#readme",
   "dependencies": {
+    "chai": "^4.2.0",
     "cmake-js": "^5.1.0",
     "mocha": "^6.0.2",
     "node-addon-api": "^1.6.2"
